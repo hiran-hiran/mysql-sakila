@@ -1,0 +1,15 @@
+﻿services:
+  mysql:
+    container_name: mysql-sakiladb
+    image: mysql:latest
+    # Apple Silicon (M1/M2/M3) でネイティブ実行する場合は linux/arm64
+    # x86_64エミュレーションで実行する場合は linux/x86_64
+    platform: linux/arm64
+    volumes:
+      - ./initdb:/docker-entrypoint-initdb.d # 初期データ(sakila)を投入
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      TZ: 'Asia/Tokyo'
+      LANG: 'ja_JP.UTF-8' # 日本語対応
+    ports:
+      - 3306:3306
