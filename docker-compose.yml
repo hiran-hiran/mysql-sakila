@@ -1,4 +1,8 @@
-﻿services:
+﻿# user: root
+# password: root
+# database: sakila
+
+services:
   mysql:
     container_name: mysql-sakiladb
     image: mysql:latest
@@ -13,3 +17,4 @@
       LANG: 'ja_JP.UTF-8' # 日本語対応
     ports:
       - 3306:3306
+      
