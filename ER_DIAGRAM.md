@@ -1,6 +1,4 @@
-# MySQL Sakila Database
-
-## ER Diagram
+# Sakila Database ER Diagram
 
 ```mermaid
 erDiagram
@@ -209,11 +207,3 @@ erDiagram
         varchar food PK
     }
 ```
-
-## person - favorite_food table
-
-- 1 対多（1:N）
-- favorite_food.person_id → person.person_id への外部キー制約（fk_fav_food_person_id）
-- 1 人の person に対して複数の favorite_food を登録可能
-- favorite_food は person_id と food の組み合わせで一意
-  - つまり、1 人の人物が複数の好きな食べ物を持つ関係です。
