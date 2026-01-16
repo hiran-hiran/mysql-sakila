@@ -1,5 +1,7 @@
 # MySQL Sakila Database
 
+https://dev.mysql.com/doc/index-other.html
+
 ## ER Diagram
 
 ```mermaid
